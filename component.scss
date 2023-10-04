@@ -19,19 +19,59 @@
 .dot {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   position: absolute;
-  top: 120px;
+  top: 60px;
   left: 40px;
 
   &-flow {
     display: flex;
-    gap: 50px;
   }
 
   &-dot {
-    cursor:  default;
-    transform: scale(4);
+    width: 50px;
+    height: 50px;
+
+    font-size: 60px;
+    text-align: center;
+
+    cursor: default;
     opacity: 0.25;
+    
+  }
+}
+
+.learn-link {
+  width: 300px;
+  border-radius: 15px;
+  outline: 1px solid #fff;
+  background-color: #171717;
+
+  box-shadow: 4px 4px #fff;
+
+  &:hover {
+    box-shadow: 1px 1px #ffffffc7;
+    transform: translateX(3px) translateY(3px);
+  }
+
+  &-img {
+    height: 80px;
+    width: 300px;
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  &-bottom {
+    padding: 7px 16px;
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &-text{
+    margin-top: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
   }
 }

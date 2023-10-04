@@ -9,11 +9,9 @@ function Dots() {
     ["•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•"],
     ["•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•"],
   ];
-  console.log(arr.length);
+
   return (
     <>
-      {/* <h1>hello word</h1> */}
-
       <div className="dot">
         {arr.map((e) => (
           <div className="dot-flow">
