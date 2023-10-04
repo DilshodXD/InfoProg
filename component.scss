@@ -1,3 +1,5 @@
+//navBtn.jsx
+
 .navBtn {
   display: inline-block;
   border: solid #fff 1px;
@@ -15,6 +17,8 @@
 .darkLight {
   background-image: url(icons/icons8-sun.svg);
 }
+
+// homeBg.jsx
 
 .dot {
   display: flex;
@@ -36,9 +40,10 @@
 
     cursor: default;
     opacity: 0.25;
-    
   }
 }
+
+// homeLearn.jsx
 
 .learn-link {
   width: 300px;
@@ -48,12 +53,15 @@
 
   box-shadow: 4px 4px #fff;
 
+  position: relative;
+
   &:hover {
     box-shadow: 1px 1px #ffffffc7;
     transform: translateX(3px) translateY(3px);
   }
 
   &-img {
+    object-fit: cover;
     height: 80px;
     width: 300px;
     border-radius: 15px 15px 0px 0px;
@@ -68,10 +76,43 @@
     font-weight: 600;
   }
 
-  &-text{
+  &-text {
     margin-top: 4px;
     margin-bottom: 15px;
     font-size: 14px;
     font-weight: 500;
+  }
+}
+
+// actives.jsx
+.actives {
+  padding: 7px 14px ;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid #fff;
+  border-radius: 15px;
+
+  &:hover {
+    box-shadow: -4px 4px #fff;
+    transform: translateX(3px) translateY(-3px);
+  }
+
+  &-img {
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+  }
+
+  &-name{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &-bio{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
