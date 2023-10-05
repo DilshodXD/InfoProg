@@ -86,19 +86,20 @@
 
 // actives.jsx
 .actives {
-  padding: 7px 14px ;
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 15px;
+  padding: 7px 14px ;
   border: 1px solid #fff;
   border-radius: 15px;
 
   &:hover {
-    box-shadow: -4px 4px #fff;
-    transform: translateX(3px) translateY(-3px);
+    box-shadow: -4px -4px #fff;
+    transform: translateX(3px) translateY(3px);
   }
 
   &-img {
+    margin: 10px 0;
     border-radius: 50px;
     width: 60px;
     height: 60px;
