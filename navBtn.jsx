@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import './component.scss'
 
-function Ul(props) {
+function NavBtn(props) {
   return (
     <>
       <li>
@@ -11,4 +11,4 @@ function Ul(props) {
   );
 }
 
-export default Ul;
+export default NavBtn;

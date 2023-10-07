@@ -1,15 +1,18 @@
+@import "../../../color";
+
 //navBtn.jsx
 
 .navBtn {
   display: inline-block;
-  border: solid #fff 1px;
+  border: 1px solid;
+  border-color: $dark-border;
   border-radius: 10px;
   padding: 7px 14px;
-  box-shadow: 4px 4px #fff;
-  color: #fff;
+  box-shadow: 4px 4px $dark-border;
+  color: $dark-border;
 
   &:active {
-    box-shadow: 1px 1px #ffffffc7;
+    box-shadow: 1px 1px $dark-border;
     transform: translateX(3px) translateY(3px);
   }
 }
@@ -48,15 +51,15 @@
 .learn-link {
   width: 300px;
   border-radius: 15px;
-  outline: 1px solid #fff;
-  background-color: #171717;
+  outline: 1px solid $dark-border;
+  background-color: $dark-bg;
 
-  box-shadow: 4px 4px #fff;
+  box-shadow: 4px 4px $dark-border;
 
   position: relative;
 
   &:hover {
-    box-shadow: 1px 1px #ffffffc7;
+    box-shadow: 1px 1px $dark-border;
     transform: translateX(3px) translateY(3px);
   }
 
@@ -87,33 +90,67 @@
 // actives.jsx
 .actives {
   display: flex;
-  align-items: start;
+  flex-direction: column;
   gap: 15px;
-  padding: 7px 14px ;
-  border: 1px solid #fff;
+  padding: 7px 14px 20px;
+  border: 1px solid $dark-border;
   border-radius: 15px;
 
-  &:hover {
-    box-shadow: -4px -4px #fff;
-    transform: translateX(3px) translateY(3px);
+  &-top {
+    display: flex;
+    gap: 14px;
   }
 
   &-img {
-    margin: 10px 0;
+    margin: 10px 0 0 0;
     border-radius: 50px;
     width: 60px;
     height: 60px;
   }
 
-  &-name{
-    color: #fff;
-    font-size: 18px;
+  &-link {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  &-name {
+    margin-top: 4px;
+    color: $dark-border;
+    font-size: 26px;
     font-weight: 700;
   }
 
-  &-bio{
+  &-userName {
+    color: $dark-border;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &-hr {
+    display: block;
     color: #fff;
+  }
+
+  &-bio {
+    color: $dark-border;
     font-size: 14px;
     font-weight: 400;
+  }
+
+  &:hover {
+    box-shadow: -4px -4px $dark-border;
+    transform: translateX(3px) translateY(3px);
+  }
+
+}
+
+.x-twiter{
+  margin: 12px 0 auto;
+  padding: 4px 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px #fff;
+  &-icon{
+
   }
 }
