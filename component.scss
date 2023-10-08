@@ -1,13 +1,18 @@
+@import "../../../color";
+
+//navBtn.jsx
+
 .navBtn {
   display: inline-block;
-  border: solid #fff 1px;
+  border: 1px solid;
+  border-color: $dark-border;
   border-radius: 10px;
   padding: 7px 14px;
-  box-shadow: 4px 4px #fff;
-  color: #fff;
+  box-shadow: 4px 4px $dark-border;
+  color: $dark-border;
 
   &:active {
-    box-shadow: 1px 1px #ffffffc7;
+    box-shadow: 1px 1px $dark-border;
     transform: translateX(3px) translateY(3px);
   }
 }
@@ -16,22 +21,135 @@
   background-image: url(icons/icons8-sun.svg);
 }
 
+// homeBg.jsx
+
 .dot {
   display: flex;
   flex-direction: column;
-  gap: 20px;
   position: absolute;
-  top: 120px;
+  top: 60px;
   left: 40px;
 
   &-flow {
     display: flex;
-    gap: 50px;
   }
 
   &-dot {
-    cursor:  default;
-    transform: scale(4);
+    width: 50px;
+    height: 50px;
+
+    font-size: 60px;
+    text-align: center;
+
+    cursor: default;
     opacity: 0.25;
   }
+}
+
+// homeLearn.jsx
+
+.learn-link {
+  width: 300px;
+  border-radius: 15px;
+  outline: 1px solid $dark-border;
+  background-color: $dark-bg;
+
+  box-shadow: 4px 4px $dark-border;
+
+  position: relative;
+
+  &:hover {
+    box-shadow: 1px 1px $dark-border;
+    transform: translateX(3px) translateY(3px);
+  }
+
+  &-img {
+    object-fit: cover;
+    height: 80px;
+    width: 300px;
+    border-radius: 15px 15px 0px 0px;
+  }
+
+  &-bottom {
+    padding: 7px 16px;
+  }
+
+  &-title {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  &-text {
+    margin-top: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+// actives.jsx
+.actives {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 7px 14px 20px;
+  border: 1px solid $dark-border;
+  border-radius: 15px;
+  width: 100%;
+
+  &-top {
+    display: flex;
+    gap: 14px;
+  }
+
+  &-img {
+    margin: 10px 0 0 0;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+  }
+
+  &-link {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  &-name {
+    width: 165px;
+    margin-top: 4px;
+    color: $dark-border;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &-userName {
+    color: $dark-border;
+    font-size: 13px;
+    font-weight: 500;
+  }
+
+  &-hr {
+    display: block;
+    color: #fff;
+  }
+
+  &-bio {
+    color: $dark-border;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &:hover {
+    box-shadow: -4px -4px $dark-border;
+    transform: translateX(3px) translateY(3px);
+  }
+
+}
+
+.x-twiter{
+  margin: 12px 0 auto;
+  padding: 4px 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px #fff;
 }

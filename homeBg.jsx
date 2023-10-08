@@ -9,16 +9,16 @@ function Dots() {
     ["•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•"],
     ["•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•", "•"],
   ];
-  console.log(arr.length);
+
   return (
     <>
-      {/* <h1>hello word</h1> */}
-
       <div className="dot">
-        {arr.map((e) => (
-          <div className="dot-flow">
-            {e.map((i) => (
-              <span className="dot-dot">{i}</span>
+        {arr.map((e, i) => (
+          <div key={i + 1} className="dot-flow">
+            {e.map((j, k) => (
+              <span key={(i + 1) * 10 + (k +1)} className="dot-dot">
+                {j}
+              </span>
             ))}
           </div>
         ))}
