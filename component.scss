@@ -95,6 +95,7 @@
   padding: 7px 14px 20px;
   border: 1px solid $dark-border;
   border-radius: 15px;
+  width: 100%;
 
   &-top {
     display: flex;
@@ -115,15 +116,16 @@
   }
   
   &-name {
+    width: 165px;
     margin-top: 4px;
     color: $dark-border;
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 700;
   }
 
   &-userName {
     color: $dark-border;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 500;
   }
 
@@ -150,7 +152,4 @@
   padding: 4px 0;
   background-color: #fff;
   box-shadow: 0 0 5px #fff;
-  &-icon{
-
-  }
 }

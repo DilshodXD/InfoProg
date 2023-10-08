@@ -16,7 +16,11 @@ function Actives(props) {
       <div className="actives-top">
         <img className="actives-img" src={props.img} alt={props.link} />
         <div className="actives-link">
-          <p className="actives-name">{props.name}</p>
+          <p className="actives-name">
+            {props.name.length > 12
+              ? props.name.split("").splice(0, 12).join("") + "..."
+              : props.name}
+          </p>
           <p className="actives-userName">@{props.link}</p>
         </div>
         {props.xLink ? (
@@ -26,9 +30,7 @@ function Actives(props) {
               style={{ color: "#000000" }}
             ></i>
           </a>
-        ) : (
-         null
-        )}
+        ) : null}
       </div>
       <hr className="actives-hr" />
       <p className="actives-bio">{props?.bio}</p>
