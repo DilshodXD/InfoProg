@@ -9,7 +9,6 @@ function Actives(props) {
       </a>
     );
   }
-  console.log(props.xLink);
 
   return (
     <a className="actives" href={"/" + props.link}>
@@ -26,7 +25,7 @@ function Actives(props) {
         {props.xLink ? (
           <a className="x-twiter" href={`https://twitter.com/${props.xLink}`}>
             <i
-              class="fa-brands fa-square-x-twitter fa-2xl x-twiter-icon"
+              className="fa-brands fa-square-x-twitter fa-2xl x-twiter-icon"
               style={{ color: "#000000" }}
             ></i>
           </a>
