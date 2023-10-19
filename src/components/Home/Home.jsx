@@ -1,16 +1,23 @@
-import { Routes, Route } from "react-router-dom";
-import HomeNavbar from './components/HomeNavbar'
-import HomePage from './components/HomePage'
+import "./homeComponents.scss";
+
+import { Outlet, Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<HomeNavbar />}>
-          <Route index element={<HomePage />} />
-          {/* <Route path="singup" element={<Blogs />} /> */}
-        </Route>
-      </Routes>
+      <div className="home-navbar">
+        <div className="container-xxl">
+          <div className="home-navbar-inner">
+            <h1 className="home-navbar-title tx-white">InfoProg</h1>
+            <div className="home-navbar-right">
+              <button className="home-navbar-button tx-white">
+                <Link to="singup">Kirish</Link>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Outlet />
     </>
   );
 }

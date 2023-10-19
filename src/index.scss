@@ -8,6 +8,11 @@
   font-family: "Inter", sans-serif;
 }
 
+a{
+  text-decoration: none;
+  color: $text-white;
+}
+
 .container-xxl {
   max-width: 1360px;
   width: 100%;
