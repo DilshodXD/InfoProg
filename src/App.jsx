@@ -3,9 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.scss";
 
 import { Counter } from "./components/Home/counter";
-import Home from "./components/Home/Home";
+import HomeNavbar from "./components/Home/components/HomeNavbar";
 import HomePage from "./components/Home/HomePage";
-import Youtube from "./components/Home/Youtube";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -15,9 +14,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* Route index (home) page */}
-          <Route path="/" element={<Home />}>
+          <Route path="/" element={<HomeNavbar />}>
             <Route index element={<HomePage />} />
-            <Route path="videos" element={<Youtube />} />
             <Route path="counter" element={<Counter />} />
           </Route>
 

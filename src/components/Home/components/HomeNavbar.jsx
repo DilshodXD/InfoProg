@@ -1,3 +1,5 @@
+import "../homeComponents.scss";
+
 import { Outlet, Link } from "react-router-dom";
 
 function HomeNavbar() {
@@ -15,6 +17,7 @@ function HomeNavbar() {
           </div>
         </div>
       </div>
+      <Outlet />
     </>
   );
 }
