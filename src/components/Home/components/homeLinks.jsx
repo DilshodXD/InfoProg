@@ -3,11 +3,11 @@ import "../homeComponents.scss";
 
 function Links({ link, img, title, text }) {
   return (
-    <Link to={link} className="home-link-box bor-white rad-15">
-      <img className="home-link-img" src={img} />
-      <div className="home-link-inBox">
-        <p className="home-link-title tx-white">{title}</p>
-        <p className="home-link-text tx-white">{text}</p>
+    <Link to={link} className="link-box bor-white rad-15">
+      <img className="link-img" src={img} />
+      <div className="link-inBox">
+        <p className="link-title tx-white">{title}</p>
+        <p className="link-text tx-white">{text}</p>
       </div>
     </Link>
   );
@@ -15,7 +15,7 @@ function Links({ link, img, title, text }) {
 
 function HomeLink() {
   return (
-    <div className="home-link d-flex jcc">
+    <section className="link d-flex jcc">
       <Links
         link={"/"}
         img={
@@ -46,7 +46,7 @@ function HomeLink() {
         }
         title={"Bog’lanish"}
       />
-    </div>
+    </section>
   );
 }
 

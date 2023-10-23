@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.scss";
 
 import { Counter } from "./components/Home/counter";
-import HomeNavbar from "./components/Home/components/HomeNavbar";
+import HomeNavbar from "./components/Home/components/homeNavbar";
 import HomePage from "./components/Home/HomePage";
 
 function App() {
