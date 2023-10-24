@@ -1,7 +1,7 @@
 import HomeSearch from "./components/search";
 import HomeLink from "./components/homeLinks";
 import Article from "./components/article";
-import { Fragment } from "react";
+import TopUsers from "./components/topUsers";
 
 function HomePage() {
   return (
@@ -9,6 +9,7 @@ function HomePage() {
       <HomeSearch />
       <HomeLink />
       <Article />
+      <TopUsers/>
     </>
   );
 }

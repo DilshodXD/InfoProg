@@ -124,7 +124,7 @@
     &-text {
       margin-bottom: 20px;
       font-size: 18px;
-      font-weight: 400;
+      font-weight: 300;
     }
     &-img {
       width: 40px;
@@ -153,7 +153,8 @@
 
   position: relative;
   overflow: hidden;
-  
+
+  cursor: pointer;
   i {
     position: absolute;
     // transition:none;
@@ -176,4 +177,76 @@
 .down {
   width: 36px;
   border-radius: 0 15px 15px 0;
+}
+// REACTIONS
+
+.users {
+  padding-top: 120px;
+  &-title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  &-inner {
+    display: flex;
+    gap: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+  }
+  &-user {
+    width: 400px !important;
+    padding: 14px;
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 300px;
+    }
+    &-img_title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 40px;
+    }
+    &-name {
+      font-size: 16px;
+      font-weight: 700;
+    }
+    &-follow {
+      padding: 2px 7px;
+      font-size: 16px;
+      font-weight: 400;
+      cursor: pointer;
+
+      &:hover {
+        transform: translate(3px, -3px);
+        box-shadow: -3px 3px $border-white;
+      }
+    }
+    &-bio {
+      margin-top: 12px;
+      margin-bottom: 20px;
+      font-size: 15px;
+      font-weight: 400;
+      height: 60px;
+      max-width: 300px;
+    }
+    &-social {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      i {
+        text-shadow: 0 0 3px #fff, 0 0 5px #fff;
+        color: #1c1c1c;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    height: 0px;
+  }
 }

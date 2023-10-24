@@ -8,12 +8,13 @@
   font-family: "Inter", sans-serif;
 }
 
-a{
+a {
   text-decoration: none;
   color: $text-white;
 }
 
-ul,ol{
+ul,
+ol {
   list-style: none;
 }
 
@@ -33,7 +34,7 @@ ul,ol{
 
 //////////////////////////////////
 
-.bg-black{
+.bg-black {
   background: $bg-black;
 }
 
@@ -73,10 +74,10 @@ ul,ol{
   }
 
   // border style
-  &-dash{
+  &-dash {
     border-style: dashed !important;
   }
-  &-none{
+  &-none {
     border-style: none !important;
   }
 }
