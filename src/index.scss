@@ -8,6 +8,16 @@
   font-family: "Inter", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: $text-white;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
 .container-xxl {
   max-width: 1360px;
   width: 100%;
@@ -16,13 +26,17 @@
 }
 
 .container-xl {
-  max-width: 960px;
+  max-width: 1152px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 //////////////////////////////////
+
+.bg-black {
+  background: $bg-black;
+}
 
 .tx {
   &-white {
@@ -55,18 +69,15 @@
   &-white {
     border: 1px solid $border-white;
   }
-  &-cerulean {
-    border: 1px solid $border-cerulean;
-  }
-  &-lapis {
-    border: 1px solid $border-lapis;
+  &-blue {
+    border: 1px solid $border-blue;
   }
 
   // border style
-  &-dash{
+  &-dash {
     border-style: dashed !important;
   }
-  &-none{
+  &-none {
     border-style: none !important;
   }
 }

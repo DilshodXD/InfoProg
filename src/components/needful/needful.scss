@@ -1,0 +1,48 @@
+@import "../../colors";
+
+.reaction {
+  border: none;
+  height: 30px;
+  border: 1px solid $bg-white;
+  padding: 2px 10px;
+
+  position: relative;
+  overflow: hidden;
+
+  cursor: pointer;
+  i {
+    position: absolute;
+    // transition:none;
+    top: 14px;
+  }
+
+  &:hover {
+    transform: translate(0px, -3px);
+    box-shadow: 0px 3px $border-white;
+  }
+}
+
+.up {
+  i {
+    width: 13px;
+  }
+
+  border-radius: 15px 0 0 15px;
+}
+.down {
+  width: 36px;
+  border-radius: 0 15px 15px 0;
+}
+
+.hoverButton {
+  border-radius: 12px;
+  outline: none;
+  border: 1px solid $border-white;
+  background-color: $bg-black;
+  font-size: 18px;
+
+  &:hover {
+    transform: translate(3px, -3px);
+    box-shadow: -3px 3px $border-white;
+  }
+}
