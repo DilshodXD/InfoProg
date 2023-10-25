@@ -1,4 +1,5 @@
 import "../homeComponents.scss";
+import HoverButton from "../../needful/hoverButton";
 
 import { Outlet, Link } from "react-router-dom";
 
@@ -10,9 +11,14 @@ function HomeNavbar() {
           <div className="navbar-inner">
             <h1 className="navbar-title tx-white">InfoProg</h1>
             <div className="navbar-right">
-              <button className="navbar-button tx-white">
+              <HoverButton
+                className="rad-10"
+                fontWeight={400}
+                fontSize={18}
+                padding={[5, 15]}
+              >
                 <Link to="singup">Kirish</Link>
-              </button>
+              </HoverButton>
             </div>
           </div>
         </div>

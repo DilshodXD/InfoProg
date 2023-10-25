@@ -1,5 +1,8 @@
-const tags = ["all", "JavaScript", "React", "Angular", "TypeScript"];
+import DownButton from "../../needful/downButton";
+import TopButtun from "../../needful/upButton";
+import HoverButton from "../../needful/hoverButton";
 
+const tags = ["all", "JavaScript", "React", "Angular", "TypeScript"];
 const people = [
   {
     id: 0, // Used in JSX as a key
@@ -36,61 +39,6 @@ const people = [
   },
 ];
 
-function upAnimate(index) {
-  let up = document.getElementById(`up${index}`);
-  let upButton = document.getElementById(`up${index}button`);
-  up.style.transition = "500ms";
-
-  setTimeout(() => {
-    up.style.top = "-10px";
-    up.style.color = "#38b000";
-    upButton.style.borderColor = "#38b000";
-  }, 200);
-
-  setTimeout(() => {
-    up.style.transition = "none";
-    up.style.top = "50px";
-    up.style.fontWeight = 700;
-  }, 450);
-
-  setTimeout(() => {
-    up.style.transition = "500ms";
-    up.style.top = "10px";
-  }, 600);
-
-  setTimeout(() => {
-    up.style.transition = "300ms";
-    up.style.top = "14px";
-  }, 1100);
-}
-
-function downAnimate(index) {
-  let down = document.getElementById(`down${index}`);
-  let downButton = document.getElementById(`down${index}button`);
-  down.style.transition = "500ms";
-
-  setTimeout(() => {
-    down.style.top = "35px";
-    down.style.color = "#f02d3a";
-    downButton.style.borderColor = "#f02d3a";
-  }, 200);
-
-  setTimeout(() => {
-    down.style.transition = "none";
-    down.style.top = "-40px";
-    down.style.fontWeight = 700;
-  }, 450);
-
-  setTimeout(() => {
-    down.style.transition = "500ms";
-    down.style.top = "18px";
-  }, 600);
-
-  setTimeout(() => {
-    down.style.top = "14px";
-  }, 1100);
-}
-
 function Article() {
   return (
     <section className="article bg-black">
@@ -98,12 +46,15 @@ function Article() {
         <h3 className="article-title tx-white">Maqolalar</h3>
         <div className="article-fil d-flex aic">
           {tags.map((e, index) => (
-            <button
+            <HoverButton
+              color={"#fff"}
+              fontSize={14}
+              fontWeight={700}
+              padding={[4, 14]}
               key={index}
-              className="article-fil-tag bg-black rad-10 tx-white"
             >
               {e}
-            </button>
+            </HoverButton>
           ))}
         </div>
         <ul className="article-boxs d-flex">
@@ -128,11 +79,7 @@ function Article() {
                 <p className="article-box-name tx-white">{e.name}</p>
                 <hr style={{ height: "28px", opacity: ".5" }} />
                 <div className="article-box-reaction d-flex aic">
-                  <button
-                    onClick={() => upAnimate(index + 1)}
-                    id={"up" + (index + 1) + "button"}
-                    className="up reaction d-flex aic jcsb bg-black"
-                  >
+                  <TopButtun index={index}>
                     <i
                       id={"up" + (index + 1)}
                       className="reaction-font fa-thin fa-lg fa-up"
@@ -148,12 +95,9 @@ function Article() {
                     >
                       153
                     </p>
-                  </button>
-                  <button
-                    onClick={() => downAnimate(index + 1)}
-                    id={"down" + (index + 1) + "button"}
-                    className="down reaction d-flex aic jcsb bg-black"
-                  >
+                  </TopButtun>
+
+                  <DownButton index={index}>
                     <i
                       id={"down" + (index + 1)}
                       className="reaction-font fa-thin fa-lg fa-down"
@@ -167,7 +111,7 @@ function Article() {
                         marginLeft: "22px",
                       }}
                     ></p>
-                  </button>
+                  </DownButton>
                 </div>
               </div>
             </li>

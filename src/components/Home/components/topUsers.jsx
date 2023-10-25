@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import HoverButton from "../../needful/hoverButton";
 
 const users = [
   {
@@ -76,9 +77,7 @@ function TopUsers() {
                       : user.user}
                   </Link>
                 </div>
-                <button className="users-user-follow bor-white tx-white bg-black rad-10">
-                  obuna
-                </button>
+                <HoverButton color={"#fff"} fontSize={16} fontWeight={400} padding={[2, 7]}>obuna</HoverButton>
               </div>
               <p className="users-user-bio tx-white">
                 {user.bio.split(" ")[0].length > 35
