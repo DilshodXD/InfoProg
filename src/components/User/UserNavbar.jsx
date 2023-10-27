@@ -16,7 +16,7 @@ function UserNavbar() {
           <h1 className="user-navbar-title tx-white">InfoProg</h1>
         </Link>
         <div className="user-navbar-vertical">
-        <Link to={""}>
+        <Link to={"/user"}>
             <HoverButton color={'#fff'} fontWeight={400} fontSize={24} padding={[10, 16]}>
               Mening sahifam
             </HoverButton>

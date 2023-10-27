@@ -6,6 +6,7 @@
   background-color: $bg-black;
   position: fixed;
   border-right: 1px solid $border-white;
+  z-index: 200;
   &-title {
     font-weight: 700;
     margin-bottom: 60px;
@@ -76,6 +77,89 @@
     display: flex;
     justify-content: center;
     gap: 20px;
-    border-bottom: 2px solid $border-white;
+    position: relative;
+    width: max-content;
+    margin: 0 auto;
+    &-link {
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      padding: 15px 10px 8px;
+      background-color: transparent;
+    }
+  }
+}
+
+.active {
+  transition: .3s;
+  // transition: all .3s cubic-bezier(0.38, 0.44, 0.67, 0.91) 0s;
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  border: 2px solid #fff;
+  border-radius: 20px 20px 0 0;
+
+  bottom: 0;
+  left: 0;
+
+  &-left {
+    background-color: $bg-black;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    bottom: -8%;
+    left: -20px;
+    &::before {
+      bottom: -2%;
+      left: -10%;
+      position: absolute;
+      
+      content: "";
+      z-index: 20;
+      
+      width: 20px;
+      height: 20px;
+      background-color: $bg-black;
+      border-right: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+      border-radius: 0 0 20px 0;
+    }
+  }
+  &-right {
+    background-color: $bg-black;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+
+    bottom: -8%;
+    right: -10%;
+    &::before {
+      bottom: 0%;
+      left: 0%;
+      position: absolute;
+      
+      content: "";
+      z-index: 20;
+
+      width: 20px;
+      height: 20px;
+      background-color: $bg-black;
+      border-radius: 0 0 0 20px;
+      border-left: 2px solid #fff;
+      border-bottom: 2px solid #fff;
+    }
+  }
+  &-bottom {
+    height: 4px;
+    width: calc(100% + 30px);
+
+    position: absolute;
+    bottom: -4px;
+    left: -15px;
+    
+    background: $bg-black;
+    text-align: center;
+    transform: translate();
   }
 }
