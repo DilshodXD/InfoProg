@@ -46,3 +46,46 @@
     box-shadow: -3px 3px $border-white;
   }
 }
+
+.post {
+  overflow: hidden;
+  height: 200px;
+  &-left {
+    padding: 12px 0 12px 16px;
+  }
+  &-right-img {
+    width: 350px;
+    object-fit: cover;
+  }
+  &-author {
+    gap: 7px;
+    margin-bottom: 12px;
+    &-img {
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
+    }
+    &-name {
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  &-text {
+    &-title {
+      font-size: 20px;
+      font-weight: 600;
+    }
+    &-text {
+      margin-top: 4px;
+      font-size: 12px;
+      font-weight: 300;
+    }
+  }
+  &-lock {
+    gap: 7px;
+    &-text {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}

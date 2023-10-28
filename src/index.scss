@@ -18,18 +18,31 @@ ol {
   list-style: none;
 }
 
-.container-xxl {
-  max-width: 1360px;
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.container-xl {
-  max-width: 1152px;
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+.container {
+  &-xxl {
+    max-width: 1360px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &-xl {
+    max-width: 1150px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &-lg{
+    max-width: 890px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  &-sm {
+    max-width: 680px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
 }
 
 //////////////////////////////////
@@ -54,11 +67,15 @@ ol {
 .jcc {
   justify-content: center;
 }
+
+.jcsb {
+  justify-content: space-between;
+}
 .aic {
   align-items: center;
 }
-.jcsb {
-  justify-content: space-between;
+.column {
+  flex-direction: column;
 }
 
 // borders
