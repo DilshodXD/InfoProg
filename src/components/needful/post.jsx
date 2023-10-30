@@ -35,7 +35,7 @@ function Post({ userImg, userName, title, text, isPublic, postImg }) {
             {isPublic ? "Barcha" : "Obunachilar"} uchun
           </p>
           <i
-            class={`fa-regular ${isPublic ? "fa-lock-open" : "fa-lock"} fa-xs`}
+            className={`fa-regular ${isPublic ? "fa-lock-open" : "fa-lock"} fa-xs`}
             style={{ color: "#ffffff" }}
           ></i>
         </div>

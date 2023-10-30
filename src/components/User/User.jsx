@@ -5,10 +5,11 @@ import { Outlet, Link } from "react-router-dom";
 function User() {
   const [path, setPath] = useState(document.location.pathname);
   const [elem, setElem] = useState([]);
-  const [left, setLeft] = useState(0);
+  const [left, setLeft] = useState();
 
   useEffect(() => {
     setElem(document.querySelectorAll(".user-links-link"));
+    setLeft(document.getElementById(path).offsetLeft);
   }, []);
 
   return (
@@ -50,45 +51,45 @@ function User() {
         <div className="user-links">
           <Link
             onClick={() => {
-              setPath("/user");
+              setPath(path);
               setLeft(elem[0].offsetLeft);
             }}
             to={"/user"}
           >
-            <div id="elem1" className="user-links-link">
+            <div id={"/user"} className="user-links-link">
               <p className="user-links-text">Nashrlar</p>
             </div>
           </Link>
           <Link
             onClick={() => {
-              setPath("/user/about");
+              setPath(path);
               setLeft(elem[1].offsetLeft);
             }}
             to={"/user/about"}
           >
-            <div id="elem2" className="user-links-link">
+            <div id={"/user/about"} className="user-links-link">
               <p className="user-links-text">Men haqimda</p>
             </div>
           </Link>
           <Link
             onClick={() => {
-              setPath("/user/saved");
+              setPath(path);
               setLeft(elem[2].offsetLeft);
             }}
             to={"/user/saved"}
           >
-            <div id="elem3" className="user-links-link">
+            <div id={"/user/saved"} className="user-links-link">
               <p className="user-links-text">Saqlanganlar</p>
             </div>
           </Link>
           <Link
             onClick={() => {
-              setPath("/user/saved");
+              setPath(path);
               setLeft(elem[3].offsetLeft);
             }}
             to={"/user/answers"}
           >
-            <div id="elem4" className="user-links-link">
+            <div id={"/user/answers"} className="user-links-link">
               <p className="user-links-text">Javoblar</p>
             </div>
           </Link>
