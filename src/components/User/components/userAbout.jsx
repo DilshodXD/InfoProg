@@ -15,7 +15,7 @@ function UserAbout() {
       <div className="user_aobut">
         <div className="user_aobut-bio">
           <p className="user_aobut-bio-text tx-white">
-            <span className="user_aobut-bio-title">Bio: </span>
+            <span className="user_aobut-bio-title">Men: </span>
             Mening ismim Dilshod Xojimuhammedov. 2004 - yil 16 - dekabrda chinoz
             tumanida tavallud topganman. Dasturlashni 2021-yilda Proweb o'quv
             markazida boshlaganman.

@@ -9,7 +9,7 @@ import HomeNavbar from "./components/Home/components/homeNavbar";
 import HomePage from "./components/Home/HomePage";
 import UserPosts from "./components/User/components/userPosts";
 import UserAbout from "./components/User/components/userAbout";
-
+import UserSettings from "./components/User/Settings";
 
 function App() {
   const [post, setPost] = useState();
@@ -33,9 +33,8 @@ function App() {
                 element={<p className="tx-white">Javoblar</p>}
               />
             </Route>
-            <Route path="settings" element={<p>settings</p>} />
+            <Route path="settings" element={<UserSettings/>} />
           </Route>
-
         </Routes>
       </BrowserRouter>
     </>
