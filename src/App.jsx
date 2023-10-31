@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.scss";
 
@@ -10,7 +10,10 @@ import HomePage from "./components/Home/HomePage";
 import UserPosts from "./components/User/components/userPosts";
 import UserAbout from "./components/User/components/userAbout";
 
+
 function App() {
+  const [post, setPost] = useState();
+
   return (
     <>
       <BrowserRouter>
@@ -21,16 +24,26 @@ function App() {
           </Route>
 
           <Route path="/user" element={<UserNavbar />}>
+
+            <Route path={""} element={<User />}>
+              <Route index element={<UserPosts />} />
+              <Route path="about" element={<UserAbout />} />
+              <Route path="saved" element={<p className="tx-white">Saved</p>} />
+              <Route
+                path="answers"
+                element={<p className="tx-white">Javoblar</p>}
+              />
+
             <Route path={''} element={<User />}>
               <Route index element={<UserPosts/>} />
               <Route path="about" element={<UserAbout/>} />
               <Route path="saved" element={<p className="tx-white">Saved</p>} /> 
               <Route path="answers" element={<p className="tx-white">Javoblar</p>} /> 
+
             </Route>
-            <Route path="settings" element={<p>settings</p>}/>
+            <Route path="settings" element={<p>settings</p>} />
           </Route>
 
-          {/* Route singup / singin page */}
         </Routes>
       </BrowserRouter>
     </>
