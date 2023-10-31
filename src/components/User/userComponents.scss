@@ -23,6 +23,7 @@
 }
 
 .user {
+  min-height: 100vh;
   margin-left: 280px;
   background: $bg-black;
   &-top {
@@ -89,10 +90,9 @@
       background-color: transparent;
     }
   }
-
-
-  &-posts{
+  &-posts {
     margin-top: 50px;
+    padding-bottom: 30px;
     gap: 15px;
   }
 }
@@ -170,16 +170,39 @@
   }
 }
 
-.user_aobut{
+.user_aobut {
   margin-top: 50px;
-  &-bio{
-    &-title{
+  &-bio {
+    &-title {
       font-size: 18px;
       font-weight: 600;
     }
-    &-text{
+    &-text {
       font-size: 16px;
       font-weight: 300;
+    }
+  }
+  &-social {
+    gap: 10px;
+    margin-top: 50px;
+    padding-bottom  : 30px;
+    width: max-content;
+    &-name {
+      font-weight: 500;
+      font-size: 18px;
+    }
+    &-inner {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      i {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-shadow: 0 0 3px #fff, 0 0 5px #fff;
+      }
     }
   }
 }

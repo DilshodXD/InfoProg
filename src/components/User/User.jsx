@@ -51,7 +51,7 @@ function User() {
         <div className="user-links">
           <Link
             onClick={() => {
-              setPath(path);
+              setPath("/user");
               setLeft(elem[0].offsetLeft);
             }}
             to={"/user"}
@@ -62,7 +62,7 @@ function User() {
           </Link>
           <Link
             onClick={() => {
-              setPath(path);
+              setPath("/user/about");
               setLeft(elem[1].offsetLeft);
             }}
             to={"/user/about"}
@@ -73,7 +73,7 @@ function User() {
           </Link>
           <Link
             onClick={() => {
-              setPath(path);
+              setPath("/user/saved");
               setLeft(elem[2].offsetLeft);
             }}
             to={"/user/saved"}
@@ -84,7 +84,7 @@ function User() {
           </Link>
           <Link
             onClick={() => {
-              setPath(path);
+              setPath("/user/answers");
               setLeft(elem[3].offsetLeft);
             }}
             to={"/user/answers"}
