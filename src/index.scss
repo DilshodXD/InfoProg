@@ -18,6 +18,10 @@ ol {
   list-style: none;
 }
 
+input{
+  outline: none;  
+}
+
 .container {
   &-xxl {
     max-width: 1240px;
@@ -31,7 +35,7 @@ ol {
     padding: 0 15px;
     margin: 0 auto;
   }
-  &-lg{
+  &-lg {
     max-width: 950px;
     width: 100%;
     padding: 0 15px;
@@ -111,4 +115,8 @@ ol {
   &-20 {
     border-radius: 20px;
   }
+}
+
+.tx-light {
+  text-shadow: 0 0 3px #fff, 0 0 5px #fff;
 }

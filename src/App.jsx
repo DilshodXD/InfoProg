@@ -12,8 +12,6 @@ import UserAbout from "./components/User/components/userAbout";
 import UserSettings from "./components/User/Settings";
 
 function App() {
-  const [post, setPost] = useState();
-
   return (
     <>
       <BrowserRouter>

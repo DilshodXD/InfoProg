@@ -79,7 +79,7 @@
     display: flex;
     gap: 20px;
     position: relative;
-    
+
     width: max-content;
     margin: 0 auto;
     &-link {
@@ -185,7 +185,7 @@
   &-social {
     gap: 10px;
     margin-top: 50px;
-    padding-bottom  : 30px;
+    padding-bottom: 30px;
     width: max-content;
     &-name {
       font-weight: 500;
@@ -207,3 +207,47 @@
   }
 }
 
+.settings {
+  display: flex;
+  gap: 15px;
+  &-input{
+    padding: 5px 12px;
+    border-radius: 10px;
+    border: 1px solid #000;
+  }
+  &-title {
+    font-weight: 600;
+    font-size: 36px;
+    padding-top: 40px;
+  }
+  &-user{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    &-name{
+      input{
+        width: 350px;
+      }
+    }
+    &-bio{
+      input{
+        width: 350px;
+      }
+    }
+  }
+  &-social {
+    gap: 20px;
+    &-inner {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      i {
+        width: 40px;
+        text-align: center;
+      }
+      input {
+        width: 220px;
+      }
+    }
+  }
+}
