@@ -1,10 +1,10 @@
-import { useState } from "react";
 import { useImmer } from "use-immer";
 
 function UserSettings() {
   const [settings, setSettings] = useImmer({
     name: "",
-    bip: "",
+    userName: "",
+    bio: "",
     github: "",
     linked: "",
     x: "",
@@ -12,7 +12,7 @@ function UserSettings() {
     youtube: "",
     web: "",
   });
-  console.log(settings);
+
   return (
     <div className="user">
       <div className="container-xl">
@@ -20,14 +20,17 @@ function UserSettings() {
         <div className="settings">
           <div className="tx-white settings-user">
             <div className="settings-user-img">
-              <input className="settings-input" type="file" />
+              <label htmlFor="file-input" className="settings-user-img-label">
+                <p className="settings-user-img-img bor-white d-flex jcc aic">Rasm yuklash</p>
+              </label>
+              <input className="settings-input settings-user-img-input" id="file-input" type="file" />
             </div>
             <div className="settings-user-name">
               <input
                 className="settings-input"
                 type="text"
                 value={settings.name}
-                placeholder="Ismingizni kiriting"
+                placeholder="Ismingiz"
                 onChange={(e) =>
                   setSettings((draft) => {
                     draft.name = e.target.value;
@@ -39,8 +42,21 @@ function UserSettings() {
               <input
                 className="settings-input"
                 type="text"
+                value={settings.userName}
+                placeholder="Foydalanuvchi ismi" 
+                onChange={(e) =>
+                  setSettings((draft) => {
+                    draft.userName = e.target.value;
+                  })
+                }
+              />
+            </div>
+            <div className="settings-user-bio">
+              <input
+                className="settings-input"
+                type="text"
                 value={settings.bio}
-                placeholder="Men haqingizda"
+                placeholder="Men haqimda / Bio"
                 onChange={(e) =>
                   setSettings((draft) => {
                     draft.bio = e.target.value;
@@ -60,7 +76,7 @@ function UserSettings() {
                 className="settings-input"
                 type="text"
                 value={settings.linked}
-                placeholder="Linked In"
+                placeholder="Linked In user name"
                 onChange={(e) =>
                   setSettings((draft) => {
                     draft.linked = e.target.value;
@@ -77,7 +93,7 @@ function UserSettings() {
                 className="settings-input"
                 type="text"
                 value={settings.github}
-                placeholder="GitHub"
+                placeholder="GitHub user name"
                 onChange={(e) =>
                   setSettings((draft) => {
                     draft.github = e.target.value;
@@ -94,7 +110,7 @@ function UserSettings() {
                 className="settings-input"
                 type="text"
                 value={settings.x}
-                placeholder="X/Twitter"
+                placeholder="X/Twitter user name"
                 onChange={(e) =>
                   setSettings((draft) => {
                     draft.x = e.target.value;
@@ -111,7 +127,7 @@ function UserSettings() {
                 className="settings-input"
                 type="text"
                 value={settings.telegram}
-                placeholder="Telegram"
+                placeholder="Telegram user name"
                 onChange={(e) =>
                   setSettings((draft) => {
                     draft.telegram = e.target.value;
@@ -128,7 +144,7 @@ function UserSettings() {
                 className="settings-input"
                 type="text"
                 value={settings.youtube}
-                placeholder="YouTube"
+                placeholder="YouTube user name"
                 onChange={(e) =>
                   setSettings((draft) => {
                     draft.youtube = e.target.value;
@@ -145,7 +161,7 @@ function UserSettings() {
                 className="settings-input"
                 type="text"
                 value={settings.web}
-                placeholder="Web"
+                placeholder="Web user name"
                 onChange={(e) =>
                   setSettings((draft) => {
                     draft.web = e.target.value;

@@ -210,7 +210,7 @@
 .settings {
   display: flex;
   gap: 15px;
-  &-input{
+  &-input {
     padding: 5px 12px;
     border-radius: 10px;
     border: 1px solid #000;
@@ -218,19 +218,34 @@
   &-title {
     font-weight: 600;
     font-size: 36px;
-    padding-top: 40px;
+    padding-top: 15px;
+    margin-bottom: 50px;
   }
-  &-user{
+  &-user {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    &-name{
-      input{
+    &-img {
+      &-label {
+      }
+      &-img {
+        border-radius: 200px;
+        width: 150px;
+        height: 150px;
+
+        background: #3c3c3c;
+      }
+      input {
+        display: none;
+      }
+    }
+    &-name {
+      input {
         width: 350px;
       }
     }
-    &-bio{
-      input{
+    &-bio {
+      input {
         width: 350px;
       }
     }
@@ -246,7 +261,7 @@
         text-align: center;
       }
       input {
-        width: 220px;
+        width: 260px;
       }
     }
   }
