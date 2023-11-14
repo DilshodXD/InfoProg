@@ -18,12 +18,18 @@ function UserSettings() {
       <div className="container-xl">
         <h1 className="settings-title tx-white">Sozlamalar</h1>
         <div className="settings">
-          <div className="tx-white settings-user">
+          <div className="settings-user">
             <div className="settings-user-img">
-              <label htmlFor="file-input" className="settings-user-img-label">
-                <p className="settings-user-img-img bor-white d-flex jcc aic">Rasm yuklash</p>
+              <label htmlFor="file-input" className="settings-user-img-label pointer">
+                <p className="tx-white settings-user-img-text bor-white d-flex jcc aic">
+                  Rasm yuklash
+                </p>
               </label>
-              <input className="settings-input settings-user-img-input" id="file-input" type="file" />
+              <input
+                className="settings-input settings-user-img-input"
+                id="file-input"
+                type="file"
+              />
             </div>
             <div className="settings-user-name">
               <input
@@ -43,7 +49,7 @@ function UserSettings() {
                 className="settings-input"
                 type="text"
                 value={settings.userName}
-                placeholder="Foydalanuvchi ismi" 
+                placeholder="Foydalanuvchi ismi"
                 onChange={(e) =>
                   setSettings((draft) => {
                     draft.userName = e.target.value;
@@ -70,7 +76,7 @@ function UserSettings() {
             <div className="settings-social-inner">
               <i
                 style={{ color: "#1c1c1c" }}
-                className="tx-light fa-brands fa-linkedin fa-2xl"
+                className="light-white fa-brands fa-linkedin fa-2xl"
               ></i>
               <input
                 className="settings-input"
@@ -87,7 +93,7 @@ function UserSettings() {
             <div className="settings-social-inner">
               <i
                 style={{ color: "#1c1c1c" }}
-                className="tx-light fa-brands fa-github fa-2xl"
+                className="light-white fa-brands fa-github fa-2xl"
               ></i>
               <input
                 className="settings-input"
@@ -104,7 +110,7 @@ function UserSettings() {
             <div className="settings-social-inner">
               <i
                 style={{ color: "#1c1c1c" }}
-                className="fa-brands tx-light fa-square-x-twitter  fa-2xl"
+                className="fa-brands light-white fa-square-x-twitter  fa-2xl"
               ></i>
               <input
                 className="settings-input"
@@ -121,7 +127,7 @@ function UserSettings() {
             <div className="settings-social-inner">
               <i
                 style={{ color: "#1c1c1c" }}
-                className="tx-light fa-brands fa-telegram  fa-2xl"
+                className="light-white fa-brands fa-telegram  fa-2xl"
               ></i>
               <input
                 className="settings-input"
@@ -138,7 +144,7 @@ function UserSettings() {
             <div className="settings-social-inner">
               <i
                 style={{ color: "#1c1c1c" }}
-                className="tx-light fa-brands fa-youtube fa-2xl"
+                className="light-white fa-brands fa-youtube fa-2xl"
               ></i>
               <input
                 className="settings-input"
@@ -155,7 +161,7 @@ function UserSettings() {
             <div className="settings-social-inner">
               <i
                 style={{ color: "#1c1c1c" }}
-                className="tx-light fa-regular fa-globe fa-2xl"
+                className="light-white fa-regular fa-globe fa-2xl"
               ></i>
               <input
                 className="settings-input"
@@ -171,6 +177,7 @@ function UserSettings() {
             </div>
           </div>
         </div>
+        <div className="settings-submit bor-white rad-10 tx-white bg-green pointer">Saqlash</div>
       </div>
     </div>
   );

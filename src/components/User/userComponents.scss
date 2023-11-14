@@ -213,7 +213,12 @@
   &-input {
     padding: 5px 12px;
     border-radius: 10px;
-    border: 1px solid #000;
+    border: 2px solid #000;
+    font-weight: 500;
+    font-size: 14px;
+    &:focus{
+      border: 2px solid $border-green;
+    }
   }
   &-title {
     font-weight: 600;
@@ -226,17 +231,19 @@
     flex-direction: column;
     gap: 15px;
     &-img {
-      &-label {
-      }
-      &-img {
+      &-text {
         border-radius: 200px;
         width: 150px;
         height: 150px;
 
         background: #3c3c3c;
       }
-      input {
+      &-input {
         display: none;
+      }
+      &-label{
+        display: block;
+        width: min-content;
       }
     }
     &-name {
@@ -265,4 +272,12 @@
       }
     }
   }
+  &-submit{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 50px;
+    width: min-content;
+    padding: 7px 18px;
+  }
+  
 }

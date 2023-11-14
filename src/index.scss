@@ -18,8 +18,8 @@ ol {
   list-style: none;
 }
 
-input{
-  outline: none;  
+input {
+  outline: none;
 }
 
 .container {
@@ -53,8 +53,25 @@ input{
 
 //////////////////////////////////
 
-.bg-black {
-  background: $bg-black;
+.bg {
+  &-black {
+    background: $bg-black;
+  }
+  &-white {
+    background: $bg-white;
+  }
+  &-blue {
+    background: $bg-blue;
+  }
+  &-red {
+    background: $bg-red;
+  }
+  &-green {
+    background: $bg-green;
+  }
+  &-yellow {
+    background: $bg-yellow;
+  }
 }
 
 .tx {
@@ -63,6 +80,18 @@ input{
   }
   &-black {
     color: $text-black;
+  }
+  &-blue {
+    color: $text-blue;
+  }
+  &-red {
+    color: $text-red;
+  }
+  &-green {
+    color: $text-green;
+  }
+  &-yellow {
+    color: $text-yellow;
   }
 }
 
@@ -95,6 +124,15 @@ input{
   &-blue {
     border: 1px solid $border-blue;
   }
+  &-red {
+    border: 1px solid $border-red;
+  }
+  &-green {
+    border: 1px solid $border-green;
+  }
+  &-yellow {
+    border: 1px solid $border-yellow;
+  }
 
   // border style
   &-dash {
@@ -117,6 +155,12 @@ input{
   }
 }
 
-.tx-light {
-  text-shadow: 0 0 3px #fff, 0 0 5px #fff;
+.light {
+  &-white {
+    text-shadow: 0 0 3px $bg-white, 0 0 5px $bg-white;
+  }
+}
+
+.pointer{
+  cursor: pointer;
 }
