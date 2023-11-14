@@ -82,17 +82,6 @@ function User() {
               <p className="user-links-text">Saqlanganlar</p>
             </div>
           </Link>
-          <Link
-            onClick={() => {
-              setPath("/user/answers");
-              setLeft(elem[3].offsetLeft);
-            }}
-            to={"/user/answers"}
-          >
-            <div id={"/user/answers"} className="user-links-link">
-              <p className="user-links-text">Javoblar</p>
-            </div>
-          </Link>
           <div style={{ left: left }} className="active">
             <span className="active-left"></span>
             <span className="active-right"></span>
