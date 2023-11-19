@@ -1,8 +1,20 @@
 import { Outlet, Link } from "react-router-dom";
 import React from "react";
+import TopButtun from "./upButton";
+import DownButton from "./downButton";
+
 import "./needful.scss";
 
-function Post({user, userImg, userName, title, text, isPublic, postImg, postPath }) {
+function Post({
+  user,
+  userImg,
+  userName,
+  title,
+  text,
+  isPublic,
+  postImg,
+  postPath,
+}) {
   return (
     <>
       <Link to={`/p/${postPath}`}>
@@ -33,16 +45,57 @@ function Post({user, userImg, userName, title, text, isPublic, postImg, postPath
                 {/* <p className="post-text-text tx-white">{text}</p> */}
               </div>
             </div>
-            <div className="post-lock tx-white d-flex aic">
-              <p className="post-lock-text">
-                {isPublic ? "Barcha" : "Obunachilar"} uchun
-              </p>
-              <i
-                className={`fa-regular ${
-                  isPublic ? "fa-lock-open" : "fa-lock"
-                } fa-xs`}
-                style={{ color: "#ffffff" }}
-              ></i>
+
+            <div className="post-bottom d-flex aic">
+              <div className="post-lock d-flex aic">
+                <p className="post-lock-text">
+                  {isPublic ? "Barcha" : "Obunachilar"} uchun
+                </p>
+                <i
+                  className={`fa-regular ${
+                    isPublic ? "fa-lock-open" : "fa-lock"
+                  } fa-xs`}
+                  style={{ color: "#ffffff" }}
+                ></i>
+              </div>
+
+              <Link to={``}>
+                <div className="post-reaction d-flex aic">
+                  <TopButtun postId={postPath}>
+                    <i
+                      id={"up" + postPath}
+                      className="reaction-font fa-thin fa-lg fa-up"
+                      style={{ color: "#ffffff" }}
+                    ></i>
+                    <p
+                      className="tx-white"
+                      style={{
+                        fontWeight: 400,
+                        fontSize: 12,
+                        marginLeft: "22px",
+                      }}
+                    >
+                      153
+                    </p>
+                  </TopButtun>
+
+                  <DownButton postId={postPath}>
+                    <i
+                      id={"down" + postPath}
+                      className="reaction-font fa-thin fa-lg fa-down"
+                      style={{ color: "#ffffff" }}
+                    ></i>
+                    <p
+                      className="tx-white"
+                      style={{
+                        fontWeight: 400,
+                        fontSize: 12,
+                        marginLeft: "22px",
+                      }}
+                    ></p>
+                  </DownButton>
+                </div>
+              </Link>
             </div>
           </div>
           <img
