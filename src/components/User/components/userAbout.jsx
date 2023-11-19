@@ -109,12 +109,3 @@ function UserAbout() {
 
 export default UserAbout;
 
-function UserAbout() {
-  return ( 
-    <>
-      <h1>User About</h1>
-    </>
-  );
-}
-
-export default UserAbout;
