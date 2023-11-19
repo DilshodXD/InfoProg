@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.scss";
 
@@ -22,7 +21,6 @@ function App() {
           </Route>
 
           <Route path="/user" element={<UserNavbar />}>
-
             <Route path={""} element={<User />}>
               <Route index element={<UserPosts />} />
               <Route path="about" element={<UserAbout />} />
@@ -31,15 +29,8 @@ function App() {
                 path="answers"
                 element={<p className="tx-white">Javoblar</p>}
               />
-
-            <Route path={''} element={<User />}>
-              <Route index element={<UserPosts/>} />
-              <Route path="about" element={<UserAbout/>} />
-              <Route path="saved" element={<p className="tx-white">Saved</p>} /> 
-              <Route path="answers" element={<p className="tx-white">Javoblar</p>} /> 
-
             </Route>
-            <Route path="settings" element={<UserSettings/>} />
+            <Route path="settings" element={<UserSettings />} />
           </Route>
         </Routes>
       </BrowserRouter>
