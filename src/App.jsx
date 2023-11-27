@@ -8,6 +8,7 @@ import HomeNavbar from "./components/Home/components/homeNavbar";
 import HomePage from "./components/Home/HomePage";
 import UserPosts from "./components/User/components/userPosts";
 import UserAbout from "./components/User/components/userAbout";
+import UserSaved from "./components/User/components/UserSaved";
 import UserSettings from "./components/User/Settings";
 
 function App() {
