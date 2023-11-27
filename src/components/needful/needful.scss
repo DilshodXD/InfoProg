@@ -83,10 +83,14 @@
     }
   }
   &-lock {
+    width: 150px;
     gap: 7px;
     &-text {
       font-size: 14px;
       font-weight: 400;
     }
+  }
+  &-reaction{
+    margin-left: 20px;
   }
 }
