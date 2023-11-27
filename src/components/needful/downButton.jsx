@@ -1,28 +1,28 @@
 import "./needful.scss";
 
-function DownButton({ children, index }) {
-  function downAnimate(index) {
-    let down = document.getElementById(`down${index}`);
-    let downButton = document.getElementById(`down${index}button`);
+function DownButton({ children, postId }) {
+  function downAnimate() {
+    let down = document.getElementById("down" + postId);
+    let downButton = document.getElementById(`downbutton`);
     down.style.transition = "500ms";
-  
+
     setTimeout(() => {
       down.style.top = "35px";
       down.style.color = "#f02d3a";
       downButton.style.borderColor = "#f02d3a";
     }, 200);
-  
+
     setTimeout(() => {
       down.style.transition = "none";
       down.style.top = "-40px";
       down.style.fontWeight = 700;
     }, 450);
-  
+
     setTimeout(() => {
       down.style.transition = "500ms";
       down.style.top = "18px";
     }, 600);
-  
+
     setTimeout(() => {
       down.style.top = "14px";
     }, 1100);
@@ -31,8 +31,8 @@ function DownButton({ children, index }) {
   return (
     <>
       <button
-        onClick={() => downAnimate(index + 1)}
-        id={"down" + (index + 1) + "button"}
+        onClick={() => downAnimate()}
+        id={"downbutton"}
         className="down reaction d-flex aic jcsb bg-black"
       >
         {children}
