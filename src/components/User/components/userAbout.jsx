@@ -107,5 +107,4 @@ function UserAbout() {
   );
 }
 
-export default UserAbout;
-
+export default UserAbout; 
