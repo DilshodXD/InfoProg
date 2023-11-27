@@ -18,6 +18,10 @@ ol {
   list-style: none;
 }
 
+input {
+  outline: none;
+}
+
 .container {
   &-xxl {
     max-width: 1240px;
@@ -31,7 +35,7 @@ ol {
     padding: 0 15px;
     margin: 0 auto;
   }
-  &-lg{
+  &-lg {
     max-width: 950px;
     width: 100%;
     padding: 0 15px;
@@ -49,8 +53,25 @@ ol {
 
 //////////////////////////////////
 
-.bg-black {
-  background: $bg-black;
+.bg {
+  &-black {
+    background: $bg-black;
+  }
+  &-white {
+    background: $bg-white;
+  }
+  &-blue {
+    background: $bg-blue;
+  }
+  &-red {
+    background: $bg-red;
+  }
+  &-green {
+    background: $bg-green;
+  }
+  &-yellow {
+    background: $bg-yellow;
+  }
 }
 
 .tx {
@@ -59,6 +80,18 @@ ol {
   }
   &-black {
     color: $text-black;
+  }
+  &-blue {
+    color: $text-blue;
+  }
+  &-red {
+    color: $text-red;
+  }
+  &-green {
+    color: $text-green;
+  }
+  &-yellow {
+    color: $text-yellow;
   }
 }
 
@@ -91,6 +124,15 @@ ol {
   &-blue {
     border: 1px solid $border-blue;
   }
+  &-red {
+    border: 1px solid $border-red;
+  }
+  &-green {
+    border: 1px solid $border-green;
+  }
+  &-yellow {
+    border: 1px solid $border-yellow;
+  }
 
   // border style
   &-dash {
@@ -111,4 +153,14 @@ ol {
   &-20 {
     border-radius: 20px;
   }
+}
+
+.light {
+  &-white {
+    text-shadow: 0 0 3px $bg-white, 0 0 5px $bg-white;
+  }
+}
+
+.pointer{
+  cursor: pointer;
 }
