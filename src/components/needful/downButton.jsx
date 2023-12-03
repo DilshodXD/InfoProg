@@ -3,7 +3,7 @@ import "./needful.scss";
 function DownButton({ children, postId }) {
   function downAnimate() {
     let down = document.getElementById("down" + postId);
-    let downButton = document.getElementById(`downbutton`+postId);
+    let downButton = document.getElementById(`downbutton` + postId);
     down.style.transition = "500ms";
 
     setTimeout(() => {
@@ -32,7 +32,7 @@ function DownButton({ children, postId }) {
     <>
       <button
         onClick={() => downAnimate()}
-        id={"downbutton"+ postId}
+        id={"downbutton" + postId}
         className="down reaction d-flex aic jcsb bg-black"
       >
         {children}
