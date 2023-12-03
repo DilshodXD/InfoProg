@@ -1,6 +1,6 @@
-import "./needful.scss"
+import "./needful.scss";
 
-function HoverButton({ children, fontSize, fontWeight, padding, color}) {
+function HoverButton({ children, fontSize, fontWeight, padding, color }) {
   return (
     <button
       style={{
