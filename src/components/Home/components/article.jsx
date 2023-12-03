@@ -19,7 +19,7 @@ const people = [
       "https://avatars.githubusercontent.com/u/101493630?s=400&u=c933f26b960ac32c98a88c147b27ea77accb39a0&v=4",
     userName: "Dilshod Xojimuhammedov",
   },
-  { 
+  {
     userImg:
       "https://avatars.githubusercontent.com/u/101493630?s=400&u=c933f26b960ac32c98a88c147b27ea77accb39a0&v=4",
     userName: "Dilshod Xojimuhammedov",
@@ -55,7 +55,7 @@ function Article() {
           ))}
         </div>
         <ul className="article-boxs d-flex">
-          {people.map(post => (
+          {people.map((post) => (
             <li>
               <Post
                 key={post.id}
