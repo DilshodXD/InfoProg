@@ -17,7 +17,7 @@ function HomeNavbar() {
                 fontSize={18}
                 padding={[5, 15]}
               >
-                <Link to="singup">Kirish</Link>
+                <Link to="login">Kirish</Link>
               </HoverButton>
             </div>
           </div>
