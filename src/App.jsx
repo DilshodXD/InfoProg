@@ -16,7 +16,6 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          {/* Route index (home) page */}
           <Route path="/" element={<HomeNavbar />}>
             <Route index element={<HomePage />} />
           </Route>
@@ -26,10 +25,6 @@ function App() {
               <Route index element={<UserPosts />} />
               <Route path="about" element={<UserAbout />} />
               <Route path="saved" element={<UserSaved />} />
-              <Route
-                path="answers"
-                element={<p className="tx-white">Javoblar</p>}
-              />
             </Route>
             <Route path="settings" element={<UserSettings />} />
           </Route>

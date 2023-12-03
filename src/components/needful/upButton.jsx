@@ -3,7 +3,7 @@ import "./needful.scss";
 function TopButtun({ children, postId }) {
   function upAnimate() {
     let up = document.getElementById("up" + postId);
-    let upButton = document.getElementById(`upbutton`);
+    let upButton = document.getElementById(`upbutton` + postId);
     up.style.transition = "500ms";
 
     setTimeout(() => {
@@ -33,7 +33,7 @@ function TopButtun({ children, postId }) {
     <>
       <button
         onClick={() => upAnimate()}
-        id={"upbutton"}
+        id={"upbutton" + postId}
         className="up reaction d-flex aic jcsb bg-black"
       >
         {children}
