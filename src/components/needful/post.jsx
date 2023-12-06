@@ -36,14 +36,13 @@ function Post({
               </Link>
               <div className="post-text">
                 <p className="post-text-title tx-white">{title}</p>
-                <p className="post-text-text tx-white d-flex">
+                <p className={`post-text-${isPublic ? "text" : "textBlock"} tx-white d-flex`}>
                   {text.slice(" ")[0] > 83
                     ? text.slice(0, 80) + "..."
                     : text.length > 242
                     ? text.slice(0, 242) + "..."
                     : text}
                 </p>
-                {/* <p className="post-text-text tx-white">{text}</p> */}
               </div>
             </div>
 
@@ -99,6 +98,9 @@ function Post({
               </Link>
             </div>
           </div>
+
+          {/* separate */}
+
           <img
             width={350}
             height={200}
