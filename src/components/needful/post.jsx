@@ -76,7 +76,6 @@ function Post({
                         marginLeft: "22px",
                       }}
                     >
-                      22
                       {like}
                     </p>
                   </TopButtun>
