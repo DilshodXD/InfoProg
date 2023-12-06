@@ -1,4 +1,3 @@
-import { useState } from "react";
 import HoverButton from "../../needful/hoverButton";
 import Post from "../../needful/post";
 
@@ -15,8 +14,9 @@ const people = [
       "https://miro.medium.com/v2/resize:fit:640/format:webp/0*kGal_TgMZnDg3LCf.png",
     text: "Websites are now an essential tool for every business. And if you are a web developer and need to find new material or resources, then this is the place for you. As a developer, it is not easy to find a website that can provide all the resources and information that you need. This article will take you through 12 websites that you’ll love as a developer.",
     title: "12 Websites You’ll Love As A Developer",
+
     likes: 53,
-  },
+ },
   {
     userImg: "https://avatars.githubusercontent.com/u/12645328?v=4",
     userName: "Marc Lou",
