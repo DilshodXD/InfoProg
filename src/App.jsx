@@ -10,6 +10,7 @@ import UserPosts from "./components/User/components/userPosts";
 import UserAbout from "./components/User/components/userAbout";
 import UserSaved from "./components/User/components/userSaved";
 import UserSettings from "./components/User/Settings";
+import LogIn from "./components/logIn/login";
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <Route path="settings" element={<UserSettings />} />
           </Route>
+
+          <Route path="login" element={<LogIn />} />
+          
         </Routes>
       </BrowserRouter>
     </>
