@@ -78,8 +78,15 @@
     }
     &-text {
       margin-top: 4px;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 300;
+    }
+    &-textBlock {
+      font-weight: 300;
+      font-size: 13px;
+      background: -webkit-linear-gradient($text-white, transparent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
   &-lock {
@@ -90,7 +97,7 @@
       font-weight: 400;
     }
   }
-  &-reaction{
+  &-reaction {
     margin-left: 20px;
   }
 }
