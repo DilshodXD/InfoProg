@@ -14,6 +14,7 @@ function Post({
   isPublic,
   postImg,
   postPath,
+  like,
 }) {
   return (
     <>
@@ -75,7 +76,8 @@ function Post({
                         marginLeft: "22px",
                       }}
                     >
-                      153
+                      22
+                      {like}
                     </p>
                   </TopButtun>
 
