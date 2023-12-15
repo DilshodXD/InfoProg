@@ -11,17 +11,18 @@ import UserAbout from "./components/User/components/userAbout";
 import UserSaved from "./components/User/components/userSaved";
 import UserSettings from "./components/User/Settings";
 import LogIn from "./components/logIn/login";
+import Create from "./components/create/create";
 
 function App() {
   return (
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomeNavbar />}>
+          <Route path="/" element={<HomeNavbar />}> {/* HOME PAGE */}
             <Route index element={<HomePage />} />
           </Route>
 
-          <Route path="/user" element={<UserNavbar />}>
+          <Route path="/user" element={<UserNavbar />}> {/* USER PAGE */}
             <Route path={""} element={<User />}>
               <Route index element={<UserPosts />} />
               <Route path="about" element={<UserAbout />} />
@@ -30,8 +31,10 @@ function App() {
             <Route path="settings" element={<UserSettings />} />
           </Route>
 
-          <Route path="login" element={<LogIn />} />
+          <Route path="/login" element={<LogIn />} />  {/* lOGIN PAGE */}
           
+          <Route path="/create" element={<Create />} />  {/* ARTICLE CREATE PAGE */}
+
         </Routes>
       </BrowserRouter>
     </>
